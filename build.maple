@@ -1,0 +1,21 @@
+plugins = [
+	'@/v'
+]
+
+config:module_path = '~/.vmodules/emmathemartian/vsg'
+
+# Installs VSG locally
+task:install = {
+	depends = [ 'build' ]
+	run = [
+		'mkdir -p ${module_path}',
+		'cp -r css ${module_path}',
+		'cp -r html ${module_path}',
+		'cp v.mod ${module_path}'
+	]
+}
+
+# Builds the generated HTML elements
+task:build.html.elements = {
+	run = 'cd html && python3 ./gen_elements.py && cd ..'
+}

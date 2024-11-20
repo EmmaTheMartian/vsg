@@ -1,0 +1,16 @@
+object IsRed {
+	color: red;
+}
+
+object BlueBg {
+	background-color: blue;
+}
+
+p {
+	inherit IsRed;
+}
+
+div {
+	inherit IsRed;
+	inherit BlueBg;
+}
