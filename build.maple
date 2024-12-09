@@ -1,6 +1,4 @@
-plugins = [
-	'@/v'
-]
+plugins = [ 'v' ]
 
 config:module_path = '~/.vmodules/emmathemartian/vsg'
 
